@@ -1550,6 +1550,8 @@ const header = document.getElementById('dsn_header');
 const videoMask = document.getElementById('video-mask');
 
 window.addEventListener('scroll', () => {
+  if (!header || !videoMask) return;
+
   // Get the height of the header
   const headerHeight = header.offsetHeight;
 

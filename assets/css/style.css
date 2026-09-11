@@ -2898,16 +2898,6 @@ a:hover, a:active {
 .work-experience {
   order: -1;
 }
-.footer-bmc-link {
-  display: inline-block;
-  margin-top: 12px;
-  max-width: 180px;
-}
-.footer-bmc-link img {
-  display: block;
-  width: 100%;
-  height: auto;
-}
 .bmc-header-logo {
   display: inline-block;
   width: 110px;
@@ -2915,9 +2905,84 @@ a:hover, a:active {
   margin-right: 8px;
   vertical-align: middle;
 }
-.header-beer-icon {
-  font-size: 0.8em;
-  margin-right: 8px;
+.nav-item-bmc {
+  display: flex;
+  align-items: center;
+}
+.header-bmc-btn {
+  display: inline-flex;
+  align-items: center;
+  line-height: 0;
+}
+.header-bmc-btn .bmc-btn-container {
+  display: inline-flex;
+}
+.header-bmc-btn .bmc-btn {
+  min-width: 0;
+  height: 30px;
+  padding: 0 12px;
+  border-radius: 15px;
+  line-height: 1;
+}
+.header-bmc-btn .bmc-btn svg {
+  height: 14px !important;
+}
+.header-bmc-btn .bmc-btn-text {
+  font-size: 12px !important;
+  margin-left: 5px;
+  line-height: 1 !important;
+}
+@media only screen and (min-width: 992px) {
+  .site-header:not(.dsn-hamburger) ul.primary-nav > li.nav-item-bmc {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+@media only screen and (max-width: 575px) {
+  .header-bmc-btn .bmc-btn {
+    height: 26px;
+    padding: 0 10px;
+  }
+  .header-bmc-btn .bmc-btn svg {
+    height: 12px !important;
+  }
+  .header-bmc-btn .bmc-btn-text {
+    font-size: 11px !important;
+  }
+}
+.footer-bmc-widget {
+  display: inline-flex;
+  margin-top: 12px;
+}
+.footer-bmc-widget .bmc-btn {
+  min-width: 0;
+  height: 52px;
+  padding: 0 20px;
+  border-radius: 10px;
+}
+.footer-bmc-widget .bmc-btn svg {
+  height: 26px !important;
+}
+.footer-bmc-widget .bmc-btn-text {
+  font-size: 18px !important;
+}
+.support-qr {
+  gap: 20px;
+}
+.support-qr-code {
+  flex-shrink: 0;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 12px;
+  line-height: 0;
+}
+.support-qr-code img {
+  display: block;
+  width: 130px;
+  height: 130px;
+}
+.support-qr-text p {
+  max-width: 320px;
 }
 @media only screen and (max-width: 991px) {
   .header-page .contact-links {
