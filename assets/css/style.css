@@ -2912,25 +2912,27 @@ a:hover, a:active {
 .header-bmc-btn {
   display: inline-flex;
   align-items: center;
-  line-height: 0;
-}
-.header-bmc-btn .bmc-btn-container {
-  display: inline-flex;
-}
-.header-bmc-btn .bmc-btn {
-  min-width: 0;
   height: 30px;
   padding: 0 12px;
-  border-radius: 15px;
+  background-color: #FFDD00;
+  color: #000000;
+  border-radius: 3px;
   line-height: 1;
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+  white-space: nowrap;
 }
-.header-bmc-btn .bmc-btn svg {
-  height: 14px !important;
+.header-bmc-btn:hover {
+  color: #000000;
 }
-.header-bmc-btn .bmc-btn-text {
-  font-size: 12px !important;
-  margin-left: 5px;
-  line-height: 1 !important;
+.header-bmc-btn-emoji {
+  font-size: 14px;
+  line-height: 1;
+  margin-right: 5px;
+}
+.header-bmc-btn-text {
+  font-size: 12px;
+  line-height: 1;
 }
 @media only screen and (min-width: 992px) {
   .site-header:not(.dsn-hamburger) ul.primary-nav > li.nav-item-bmc {
@@ -2939,15 +2941,15 @@ a:hover, a:active {
   }
 }
 @media only screen and (max-width: 575px) {
-  .header-bmc-btn .bmc-btn {
+  .header-bmc-btn {
     height: 26px;
     padding: 0 10px;
   }
-  .header-bmc-btn .bmc-btn svg {
-    height: 12px !important;
+  .header-bmc-btn-emoji {
+    font-size: 12px;
   }
-  .header-bmc-btn .bmc-btn-text {
-    font-size: 11px !important;
+  .header-bmc-btn-text {
+    font-size: 11px;
   }
 }
 .footer-bmc-widget {

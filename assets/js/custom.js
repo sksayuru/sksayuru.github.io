@@ -1565,3 +1565,32 @@ window.addEventListener('scroll', () => {
     videoMask.style.display = 'block';
   }
 });
+
+// Re-render the Buy Me a Coffee button after the site's ajax page
+// transitions. The vendor script only renders via document.write on the
+// initial parse, so its <script> tag being swapped back into the DOM by
+// an ajax navigation never re-executes on its own.
+(function () {
+  function renderBmcButtons() {
+    if (typeof window.bmcBtnWidget !== 'function') return;
+    document.querySelectorAll('.footer-bmc-widget').forEach(function (container) {
+      if (container.querySelector('.bmc-btn-container')) return;
+      var script = container.querySelector('script[data-name="bmc-button"]');
+      if (!script) return;
+      var html = window.bmcBtnWidget(
+        script.getAttribute('data-text'),
+        script.getAttribute('data-slug'),
+        script.getAttribute('data-color'),
+        script.getAttribute('data-emoji'),
+        script.getAttribute('data-font'),
+        script.getAttribute('data-font-color'),
+        script.getAttribute('data-outline-color'),
+        script.getAttribute('data-coffee-color')
+      );
+      script.insertAdjacentHTML('afterend', html);
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', renderBmcButtons);
+  new MutationObserver(renderBmcButtons).observe(document.documentElement, { childList: true, subtree: true });
+})();
