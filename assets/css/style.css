@@ -2886,9 +2886,49 @@ a:hover, a:active {
   width: 12px;
   height: 12px;
 }
+.header-page .contact-links a .bmc-logo {
+  width: 150px;
+  height: auto;
+}
+.header-page .contact-links a .bmc-logo img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.work-experience {
+  order: -1;
+}
+.footer-bmc-link {
+  display: inline-block;
+  margin-top: 12px;
+  max-width: 180px;
+}
+.footer-bmc-link img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.bmc-header-logo {
+  display: inline-block;
+  width: 110px;
+  height: auto;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+.header-beer-icon {
+  font-size: 0.8em;
+  margin-right: 8px;
+}
 @media only screen and (max-width: 991px) {
   .header-page .contact-links {
     margin-left: 0;
+  }
+  .header-page .contact-links {
+    width: 100% !important;
+  }
+  .header-page .title-lg {
+    max-width: 100%;
+    overflow-wrap: anywhere;
   }
 }
 .header-page .breadcrumbs {

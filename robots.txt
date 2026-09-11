@@ -1,0 +1,14 @@
+User-agent: *
+Disallow: /index.html
+
+User-agent: GPTBot
+Disallow: /index.html
+
+User-agent: Google-Extended
+Disallow: /index.html
+
+User-agent: ClaudeBot
+Disallow: /index.html
+
+User-agent: CCBot
+Disallow: /index.html
